@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: pokemon-api
+  datasource:
+    url: jdbc:h2:mem:pokemondb;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+  h2:
+    console:
+      enabled: false
+  cache:
+    type: caffeine
+    caffeine:
+      spec: maximumSize=500,expireAfterWrite=30m
+
+pokeapi:
+  base-url: https://pokeapi.co/api/v2
+  timeout:
+    connect: 5000
+    read: 10000
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,caches
+  endpoint:
+    health:
+      show-details: when-authorized
