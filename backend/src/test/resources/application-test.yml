@@ -1,0 +1,14 @@
+spring:
+  cache:
+    type: none
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+pokeapi:
+  base-url: http://localhost:8089
+  timeout:
+    connect: 5000
+    read: 10000
