@@ -13,21 +13,36 @@ A Spring Boot REST API for Pokemon data with local storage capabilities.
 
 ### Prerequisites
 
-- Java 21
-- Maven 3.9+
-- Docker (optional)
+- Docker and Docker Compose
 
-### Local Development
+### Run with Single Command
 
 ```bash
-cd backend
-./mvnw spring-boot:run -Dspring-boot.run.profiles=dev
+docker compose up --build
 ```
 
-### Docker
+Or use the provided script:
 
 ```bash
 ./scripts/start-prod.sh
+```
+
+This starts both the API and frontend:
+- **Frontend**: http://localhost:3000
+- **API**: http://localhost:8080
+- **Swagger UI**: http://localhost:8080/swagger-ui.html
+
+### Local Development (without Docker)
+
+```bash
+# Terminal 1: Backend
+cd backend
+./mvnw spring-boot:run -Dspring-boot.run.profiles=dev
+
+# Terminal 2: Frontend
+cd frontend
+npm install
+npm run dev
 ```
 
 ## API Documentation
