@@ -62,6 +62,18 @@ function LocalPokemon() {
     }
   };
 
+  const handleDelete = async (id) => {
+    if (!window.confirm('Are you sure you want to remove this Pokemon from your collection?')) {
+      return;
+    }
+    try {
+      await pokemonApi.deleteLocal(id);
+      fetchLocalPokemon();
+    } catch (err) {
+      setError(err.response?.data?.message || err.message);
+    }
+  };
+
   if (loading) return <div className="loading">Loading...</div>;
   if (error) return <div className="error">Error: {error}</div>;
 
@@ -131,9 +143,14 @@ function LocalPokemon() {
                     </div>
                   )}
 
-                  <button onClick={() => handleEdit(p)} className="edit-btn">
-                    Edit
-                  </button>
+                  <div className="card-actions">
+                    <button onClick={() => handleEdit(p)} className="edit-btn">
+                      Edit
+                    </button>
+                    <button onClick={() => handleDelete(p.id)} className="delete-btn">
+                      Remove
+                    </button>
+                  </div>
                 </div>
               )}
             </div>

@@ -308,14 +308,34 @@ h1 {
   color: #666;
 }
 
-.edit-btn {
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
   margin-top: 1rem;
+}
+
+.edit-btn {
   padding: 0.5rem 1rem;
   border: 1px solid #dc0a2d;
   background: white;
   color: #dc0a2d;
   border-radius: 6px;
   cursor: pointer;
+}
+
+.delete-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #666;
+  background: white;
+  color: #666;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #fee;
+  border-color: #c00;
+  color: #c00;
 }
 
 .edit-form {

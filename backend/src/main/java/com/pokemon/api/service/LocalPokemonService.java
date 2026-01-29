@@ -80,4 +80,12 @@ public class LocalPokemonService {
                 .map(mapper::toLocalResponse)
                 .toList();
     }
+
+    @Transactional
+    public void delete(int id) {
+        if (!repository.existsById(id)) {
+            throw new PokemonNotFoundException(id);
+        }
+        repository.deleteById(id);
+    }
 }

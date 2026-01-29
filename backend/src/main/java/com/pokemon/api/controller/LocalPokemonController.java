@@ -57,4 +57,13 @@ public class LocalPokemonController {
     public ResponseEntity<List<LocalPokemonResponse>> listLocalPokemon() {
         return ResponseEntity.ok(localPokemonService.findAll());
     }
+
+    @DeleteMapping("/{id}")
+    @Operation(summary = "Delete locally stored Pokemon")
+    public ResponseEntity<Void> deletePokemon(
+            @Parameter(description = "Local Pokemon ID")
+            @PathVariable int id) {
+        localPokemonService.delete(id);
+        return ResponseEntity.noContent().build();
+    }
 }

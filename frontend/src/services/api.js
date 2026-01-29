@@ -27,6 +27,9 @@ export const pokemonApi = {
 
   updateLocal: (id, data) =>
     api.put(`/local-pokemon/${id}`, data),
+
+  deleteLocal: (id) =>
+    api.delete(`/local-pokemon/${id}`),
 };
 
 export default api;
