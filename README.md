@@ -15,11 +15,14 @@ A Spring Boot REST API for Pokemon data with local storage capabilities.
   </tr>
   <tr>
     <td align="center"><strong>Local Collection</strong></td>
-    <td align="center"><strong>Swagger API</strong></td>
+    <td align="center"><strong>Local Collection</strong></td>
+    <td align="center"><strong>Swagger</strong></td>
   </tr>
   <tr>
     <td><img src="https://github.com/user-attachments/assets/f6226386-6889-4182-b5a2-b56e5c163d65" alt="Local Collection" width="400"/></td>
     <td><img src="https://github.com/user-attachments/assets/3a6ac0a8-d1ee-4504-bea9-05ff77142fb6" alt="Swagger API" width="400"/></td>
+    <td><img width="1598" height="982" alt="image" src="https://github.com/user-attachments/assets/6d48b286-1cc0-4901-b29b-dd8ee3b91b74" /></td>
+
   </tr>
 </table>
 
