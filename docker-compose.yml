@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  pokemon-api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: pokemon-api
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - JAVA_OPTS=-XX:+UseContainerSupport -XX:MaxRAMPercentage=75.0 -XX:InitialRAMPercentage=50.0 -XX:+UseG1GC
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+        reservations:
+          memory: 512M
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:8080/actuator/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    restart: unless-stopped
+    volumes:
+      - pokemon-data:/app/data
+
+  pokemon-api-dev:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: pokemon-api-dev
+    ports:
+      - "8080:8080"
+      - "5005:5005"
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+      - JAVA_OPTS=-XX:+UseContainerSupport -XX:MaxRAMPercentage=75.0 -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+    profiles:
+      - dev
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: pokemon-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - pokemon-api
+    profiles:
+      - frontend
+
+volumes:
+  pokemon-data:
