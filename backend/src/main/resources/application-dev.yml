@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:pokemondb;DB_CLOSE_DELAY=-1
+  jpa:
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+logging:
+  level:
+    root: INFO
+    com.pokemon: DEBUG
+    org.springframework.web: DEBUG
