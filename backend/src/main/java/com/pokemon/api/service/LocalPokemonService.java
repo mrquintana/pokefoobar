@@ -16,6 +16,10 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Service for managing locally stored Pokemon.
+ * Handles copying from PokeAPI, CRUD operations, and attribute management.
+ */
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)

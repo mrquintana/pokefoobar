@@ -21,6 +21,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+/**
+ * Maps between PokeAPI responses, entities, and DTOs.
+ * Handles type/ability extraction, evolution chain traversal, and JSON serialization.
+ */
 @Component
 public class PokemonMapper {
 

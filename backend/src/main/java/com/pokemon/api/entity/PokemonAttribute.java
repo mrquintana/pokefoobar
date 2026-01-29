@@ -4,6 +4,10 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * EAV (Entity-Attribute-Value) entity for storing custom Pokemon attributes.
+ * Allows flexible key-value pairs without schema changes (e.g., name_jp, nickname).
+ */
 @Entity
 @Table(name = "pokemon_attribute",
         uniqueConstraints = @UniqueConstraint(columnNames = {"pokemon_id", "attribute_key"}))

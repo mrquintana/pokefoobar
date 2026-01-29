@@ -16,6 +16,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * REST controller for managing locally stored Pokemon.
+ * Supports copying from PokeAPI, updating with custom attributes, and deletion.
+ */
 @RestController
 @RequestMapping("/api/v1/local-pokemon")
 @RequiredArgsConstructor

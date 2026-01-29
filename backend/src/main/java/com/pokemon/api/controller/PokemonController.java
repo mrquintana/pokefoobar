@@ -10,6 +10,10 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * REST controller for fetching Pokemon data from PokeAPI.
+ * Provides paginated listing and detailed Pokemon information including evolutions.
+ */
 @RestController
 @RequestMapping("/api/v1/pokemon")
 @RequiredArgsConstructor

@@ -15,6 +15,10 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Service for retrieving Pokemon data from PokeAPI.
+ * Orchestrates calls to PokeAPI client and maps responses to DTOs.
+ */
 @Service
 @RequiredArgsConstructor
 public class PokemonService {

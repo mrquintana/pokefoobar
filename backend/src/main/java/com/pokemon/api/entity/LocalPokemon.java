@@ -8,6 +8,10 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Entity representing a Pokemon stored in the local database.
+ * Uses EAV pattern via {@link PokemonAttribute} for extensible custom fields.
+ */
 @Entity
 @Table(name = "local_pokemon")
 @Getter

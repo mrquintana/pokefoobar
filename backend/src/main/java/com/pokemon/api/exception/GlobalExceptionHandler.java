@@ -11,6 +11,10 @@ import org.springframework.web.client.HttpClientErrorException;
 import java.time.LocalDateTime;
 import java.util.stream.Collectors;
 
+/**
+ * Centralized exception handling for all REST controllers.
+ * Maps exceptions to appropriate HTTP status codes and error responses.
+ */
 @RestControllerAdvice
 @Slf4j
 public class GlobalExceptionHandler {

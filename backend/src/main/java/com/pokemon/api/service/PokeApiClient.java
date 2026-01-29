@@ -9,6 +9,10 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;
 
+/**
+ * HTTP client for PokeAPI (pokeapi.co).
+ * All responses are cached to reduce external API calls.
+ */
 @Component
 @RequiredArgsConstructor
 public class PokeApiClient {
