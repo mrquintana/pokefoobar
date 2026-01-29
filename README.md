@@ -3,31 +3,10 @@
 A Spring Boot REST API for Pokemon data with local storage capabilities.
 
 ## Screenshots
-
-<table>
-  <tr>
-    <td align="center"><strong>Pokemon List</strong></td>
-    <td align="center"><strong>Pokemon Detail</strong></td>
-  </tr>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/d7894ae6-71d6-45c6-9fae-98ea9c32d143" alt="Pokemon List" width="400"/></td>
-    <td><img src="https://github.com/user-attachments/assets/24e88d84-f30a-4fb3-80ce-5bcbe1887156" alt="Pokemon Detail" width="400"/></td>
-  </tr>
-  <tr>
-    <td align="center"><strong>Local Collection</strong></td>
-    <td align="center"><strong>Local Collection</strong></td>
-  </tr>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/f6226386-6889-4182-b5a2-b56e5c163d65" alt="Local Collection" width="400"/></td>
-    <td><img src="https://github.com/user-attachments/assets/3a6ac0a8-d1ee-4504-bea9-05ff77142fb6" alt="Local Collection" width="400"/></td>
-  </tr>
-    <tr>
-    <td align="center"><strong>Swagger</strong></td>
-  </tr>
-  <tr>
-    <td><img src="https://github.com/user-attachments/assets/6d48b286-1cc0-4901-b29b-dd8ee3b91b74" /></td>
-  </tr>
-</table>
+<img src="https://github.com/user-attachments/assets/d7894ae6-71d6-45c6-9fae-98ea9c32d143" alt="Pokemon List" width="400"/>
+<img src="https://github.com/user-attachments/assets/f6226386-6889-4182-b5a2-b56e5c163d65" alt="Local Collection" width="400"/>
+<img src="https://github.com/user-attachments/assets/3a6ac0a8-d1ee-4504-bea9-05ff77142fb6" alt="Local Collection" width="400"/>
+<img src="https://github.com/user-attachments/assets/6d48b286-1cc0-4901-b29b-dd8ee3b91b74" />
 
 ## Features
 
