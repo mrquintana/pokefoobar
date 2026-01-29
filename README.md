@@ -116,5 +116,3 @@ pokefoobar/
 ## Screenshots
 <img src="https://github.com/user-attachments/assets/d7894ae6-71d6-45c6-9fae-98ea9c32d143" alt="Pokemon List" width="400"/>
 <img src="https://github.com/user-attachments/assets/f6226386-6889-4182-b5a2-b56e5c163d65" alt="Local Collection" width="400"/>
-<img src="https://github.com/user-attachments/assets/3a6ac0a8-d1ee-4504-bea9-05ff77142fb6" alt="Local Collection" width="400"/>
-<img src="https://github.com/user-attachments/assets/6d48b286-1cc0-4901-b29b-dd8ee3b91b74" />
